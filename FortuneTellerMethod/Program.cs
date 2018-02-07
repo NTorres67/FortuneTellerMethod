@@ -10,15 +10,16 @@ namespace FortuneTellerMethod
     {
         static void Main(string[] args)
         {
-            //User's First Name
             string nameFirst = "";
+            string nameLast = "";
+
+            //User's First Name
             Console.WriteLine("Please enter your first name.");
             nameFirst = Console.ReadLine();
             Console.WriteLine(" ");
             //Console.WriteLine(nameFirst);
 
             //User's Last Name
-            string nameLast = "";
             Console.WriteLine("Please enter your last name.");
             nameLast = Console.ReadLine();
             Console.WriteLine(" ");
@@ -47,7 +48,7 @@ namespace FortuneTellerMethod
             }
 
             //Console.WriteLine(retire);
-            Console.WriteLine("");
+               Console.WriteLine("");
 
             //Birth Month
             Console.WriteLine("Please enter your month of birth by its numerical value.");
@@ -197,31 +198,11 @@ namespace FortuneTellerMethod
 
             Console.WriteLine("");
 
-
-
-
-            // Methods
-
-            // Greet user
-            Console.WriteLine("Greetings " + nameFirst + " " + nameLast + ". " + "I will tell you your fortune!");
-
-            // Calculate years to retirement
-            Console.WriteLine("You will retire in " + retire + " years.");
-
-            // Determine vacation home utilizing number of siblings
-            Console.WriteLine("You will retire in a " + vac + ".");
-
-            // Mode of transportation utilizing ROYGBIV
-            Console.WriteLine("You will be transported by a " + col + ".");
-
-
-            // Determine how much money will retire with as determined by month of birth
-            Console.WriteLine("You will retire with " + pay + ".");
-
-
-            // Judge how good the fortune is
-            Console.WriteLine("Better luck in your next life! ( *_* )");
         }
+
+
+        
+
     }
 }
 
