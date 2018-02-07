@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace FortuneTellerMethod
 {
+
+    // ======================= THIS CLASS IS NOT NEEDED FOR THIS EXECISE ========================
+
     public class FortuneTelling
     {
-        private string nameFirst;
-        private string nameLast;
-        private int retire;
-        private string vac;
-        private string col;
-        private string pay;
+        string nameFirst;
+        string nameLast;
+        string nameFull;
+        int retire;
+        string vac;
+        string col;
+        string pay;
 
 
 
@@ -29,6 +33,12 @@ namespace FortuneTellerMethod
         {
             get { return this.nameLast; }
             set { this.nameLast = value; }
+        }
+
+        public string NameFull
+        {
+            get { return this.nameFull; }
+            set { this.nameFull = value; }
         }
 
         public int Retire
@@ -64,22 +74,22 @@ namespace FortuneTellerMethod
         }
 
 
-        public FortuneTelling(string nameFirst, string nameLast, int retire, string vac, string col, string pay)
+        public FortuneTelling(string nameFirst, string nameLast, string nameFull, int retire, string vac, string col, string pay)
         {
             this.nameFirst = nameFirst;
             this.nameLast = nameLast;
+            this.nameFull = nameFull;
             this.retire = retire;
             this.vac = vac;
             this.col = col;
             this.pay = pay;
 
         }
-
-
+        
 
         // Methods
 
-        // Greet user
+        // Greet User
         public void Greeting()
         {
             // User's First Name
@@ -93,13 +103,9 @@ namespace FortuneTellerMethod
             Console.WriteLine("Please enter your last name.");
             nameLast = Console.ReadLine();
             Console.WriteLine(" ");
-
-            // User's Full Name
-            string nameFull = nameFirst + nameLast;
-
+            
             // Greet User
             Console.WriteLine("Greetings, " + nameFirst + " " + nameLast + ". I will tell you your fortune!");
-            //Console.WriteLine("Greetings, " + nameFirst + " " + nameLast + ". I will tell you your fortune!");
             Console.WriteLine("");
         }
 
@@ -141,7 +147,7 @@ namespace FortuneTellerMethod
 
             Console.WriteLine("");
 
-            //Console.WriteLine(retire);
+            Console.WriteLine(retire);
             return (retire);
         }
 
@@ -161,42 +167,42 @@ namespace FortuneTellerMethod
 
             if (numberSiblings <= 0)
             {
-                vac = "shack int the garbage dump";
+                vac = " the garbage dump";
                 //Console.WriteLine(vac);
             }
             if (numberSiblings == 0)
             {
-                vac = "cabin in the woods";
+                vac = "woods";
             }
             if (numberSiblings == 1)
             {
-                vac = "dome in the Pacific Ocean";
+                vac = "Pacific Ocean";
             }
             if (numberSiblings == 2)
             {
-                vac = "houseboat in the Mediterranean";
+                vac = "Mediterranean";
             }
             if (numberSiblings == 3)
             {
-                vac = "yurt in the Rockies";
+                vac = "Rockies";
             }
             if (numberSiblings >= 3)
             {
-                vac = "yurt in the Rockies";
+                vac = "Rockies";
             }
             else
             { }
 
             Console.WriteLine("");
 
-            //Console.WriteLine(vac);
+            Console.WriteLine(vac);
             return (vac);
         }
 
 
 
         // Mode of transportation utilizing ROYGBIV
-        public string FavoriteColor()
+        public string Transportation()
         {
             //Favorite Color
             Console.WriteLine("Please state your favorite using the ROYGBIV color acronym.");
@@ -264,7 +270,7 @@ namespace FortuneTellerMethod
             }
             Console.WriteLine("");
 
-            //Console.WriteLine(col);
+            Console.WriteLine(col);
             return (col);
         }
 
@@ -303,7 +309,7 @@ namespace FortuneTellerMethod
             { }
             Console.WriteLine("");
 
-            //Console.WriteLine(pay);
+            Console.WriteLine(pay);
             return (pay);
         }
 
@@ -318,6 +324,11 @@ namespace FortuneTellerMethod
         {
 
         }
+
+        //public void Fortune()
+        //{
+        //    Console.WriteLine(firstName + " " + nameLast + " will retire in " + retire + " with " + pay + " in the bank, a vaction home in " + vac + " and a " + col + ".");
+        //}
 
 
     }
